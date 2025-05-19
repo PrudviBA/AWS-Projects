@@ -1,4 +1,4 @@
-# # AWS VPC Setup Project
+# # AWS Custom VPC Setup
 
 ## Project Overview
 This project demonstrates the creation and configuration of a Virtual Private Cloud (VPC) in AWS using the Tokyo (Asia Pacific) region. The goal is to set up a custom VPC environment with subnets, internet gateway, route tables, and launch a Windows EC2 instance inside the VPC. Finally, I verified internet connectivity on the instance via RDP.
@@ -69,4 +69,16 @@ Selected **Asia Pacific (Tokyo) ap-northeast-1** as the deployment region to dem
 - Automate VPC and instance setup using AWS CloudFormation or Terraform.
 - Set up security groups and Network ACLs for better traffic control.
 - Explore launching Linux instances and connecting via SSH.
+
+## 📘 Key Learnings
+This setup helped me develop a strong understanding of AWS VPC architecture and cloud networking fundamentals:
+- 🔧 **Custom VPC Setup** – Gained understanding of why and how to create a custom VPC instead of using the default one.
+- 🌐 **Internet Gateway & Public Subnets** – Learned how to enable internet access by attaching an Internet Gateway and configuring public subnets.
+- 🧭 **Routing Concepts** – Understood how route tables work and how to set up routes to direct outbound traffic.
+- 💻 **Launching EC2 Instances** – Practiced launching Windows EC2 instances and assigning public IPs for remote access.
+- 🔒 **Security Awareness** – Became more familiar with AWS access methods like RDP and basic security configurations.
+- 📡 **Connectivity Testing** – Used the `ping` command to verify internet connectivity from inside the instance.
+- 🌍 **Region Awareness** – Understood the importance of selecting the appropriate AWS region for deployment.
+- 🧱 **Component Relationships** – Learned how different VPC components (VPC, subnets, route tables, IGWs) work together to form a secure, functional network.
+
 
