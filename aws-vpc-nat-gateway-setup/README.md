@@ -79,6 +79,15 @@ This project demonstrates how to set up a NAT Gateway on AWS to enable instances
 - Public instance: Successfully reachable from the internet.  
 - Private instance: No internet access yet (as expected).
 
+- ### Private Instance Internet Access Without NAT Gateway
+- ### *Note:* The above screenshot shows successful internet access on the **public EC2 instance**.
+
+<img width="960" alt="10-internet" src="https://github.com/user-attachments/assets/0480091a-c320-4169-b7e9-d922188fc8a8" />
+
+However, **instances in the private subnet cannot access the internet without a NAT Gateway configured.**  
+
+This ensures that private instances remain secure by not exposing them directly to inbound internet traffic while still allowing outbound internet access when a NAT Gateway is set up.
+
 ---
 
 ### 8. 🚪 Create NAT Gateway
@@ -87,6 +96,7 @@ This project demonstrates how to set up a NAT Gateway on AWS to enable instances
 - Purpose: Allow private subnet instances to reach the internet for updates.
 
 ---
+### Private Instance Internet Access Without NAT Gateway
 
 ### 9. 🧭 Update Private Route Table
 - Added a route:  
