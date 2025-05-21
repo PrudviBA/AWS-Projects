@@ -1,4 +1,4 @@
-# # AWS Custom VPC Setup
+#  AWS Custom VPC Setup
 
 ## Project Overview
 This project demonstrates the creation and configuration of a Virtual Private Cloud (VPC) in AWS using the Tokyo (Asia Pacific) region. The goal is to set up a custom VPC environment with subnets, internet gateway, route tables, and launch a Windows EC2 instance inside the VPC. Finally, I verified internet connectivity on the instance via RDP.
