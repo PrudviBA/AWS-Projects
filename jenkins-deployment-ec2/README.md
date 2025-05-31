@@ -70,9 +70,10 @@ Selected **Asia Pacific (Tokyo) ap-northeast-1** as the deployment region.
       sudo systemctl start jenkins
       ```
   - Check the status to ensure it’s running:
-        ```bash
-      sudo systemctl status jenkins
-        ```
+      ```bash
+     bash sudo systemctl status jenkins
+      ```
+  
   ### 7️⃣ Configure Security Group
   - Added an inbound rule for TCP port 8080 in the EC2 security group.
 
