@@ -50,9 +50,9 @@ Selected **Asia Pacific (Tokyo) ap-northeast-1** as the deployment region.
   java --version
 
   ```
-  ### 5️⃣ Install Jenkins
-  - Added the Jenkins repository and key:
- - Visit the Jenkins official website to find the latest repository setup commands for Ubuntu.
+### 5️⃣ Install Jenkins
+- Added the Jenkins repository and key:
+- Visit the Jenkins official website to find the latest repository setup commands for Ubuntu.
   
   - Download and add the Jenkins keyring, add the repository, and update the package list:
     ```bash
@@ -64,49 +64,58 @@ Selected **Asia Pacific (Tokyo) ap-northeast-1** as the deployment region.
     sudo apt-get update
     sudo apt-get install jenkins
     ```
-    ### 6️⃣ Start Jenkins and Check Its Status
-    - Start the Jenkins service:
+ ### 6️⃣ Start Jenkins and Check Its Status
+  - Start the Jenkins service:
       ```bash
       sudo systemctl start jenkins
       ```
-    - Check the status to ensure it’s running:
+  - Check the status to ensure it’s running:
         ```bash
       sudo systemctl status jenkins
         ```
-        ### 7️⃣ Configure Security Group
-    - Added an inbound rule for TCP port 8080 in the EC2 security group.
+  ### 7️⃣ Configure Security Group
+  - Added an inbound rule for TCP port 8080 in the EC2 security group.
 
-- ⚠️ Reason:
+ - ⚠️ Reason:
 
-- Jenkins runs on port 8080 by default. Opening this port allows external access to the Jenkins web interface.
+ - Jenkins runs on port 8080 by default. Opening this port allows external access to the Jenkins web interface.
 
-- Opening the port to 0.0.0.0/0 for testing, but for production, restrict to trusted IPs.
- ### 8️⃣ Access Jenkins
-- Open browser and navigate to:
+ - Opening the port to 0.0.0.0/0 for testing, but for production, restrict to trusted IPs.
+  ### 8️⃣ Access Jenkins
+ - Open browser and navigate to:
   ```bash
   http://<EC2_Public_IP>:8080
   ```
  -  ⚠️ Important Note:
  -  Use HTTP instead of HTTPS because Jenkins by default uses HTTP on port 8080 and does not have SSL certificates configured. Using HTTPS without certificates causes browser errors.
+
+---
+
    ### Outcome
-- ✅ Successfully deployed Jenkins on Ubuntu EC2 instance.
-- ✅ Verified Jenkins dashboard access externally using HTTP.
-- ✅ Security group properly configured for secure and functional access.
+ - ✅ Successfully deployed Jenkins on Ubuntu EC2 instance.
+ - ✅ Verified Jenkins dashboard access externally using HTTP.
+ - ✅ Security group properly configured for secure and functional access.
+
+---
+
   ### Future Enhancements
-- Set up SSL/TLS certificates to enable secure HTTPS access to Jenkins.
-- Automate deployment using Terraform or AWS CloudFormation.
-- Add NAT Gateway and private subnets for better security architecture.
-- Implement fine-grained security group rules and Jenkins user permissions.
+ - Set up SSL/TLS certificates to enable secure HTTPS access to Jenkins.
+ - Automate deployment using Terraform or AWS CloudFormation.
+ - Add NAT Gateway and private subnets for better security architecture.
+ - Implement fine-grained security group rules and Jenkins user permissions.
+
+---
+   
   ### 📘 Key Learnings
-- 🔧 Jenkins Setup on Ubuntu – Learned full deployment steps.
+ - 🔧 Jenkins Setup on Ubuntu – Learned full deployment steps.
 
-- ☕ Java Prerequisite – Importance of Java for Jenkins.
+ - ☕ Java Prerequisite – Importance of Java for Jenkins.
 
-- 🔓 Security Groups – How to open ports for application access.
+ - 🔓 Security Groups – How to open ports for application access.
 
-- 🖥️ SSH Connection – Correct OS username is crucial for connection.
+ - 🖥️ SSH Connection – Correct OS username is crucial for connection.
 
-- 🌐 HTTP Access – Understanding Jenkins default uses HTTP and not HTTPS.
+ - 🌐 HTTP Access – Understanding Jenkins default uses HTTP and not HTTPS.
 
 
 
